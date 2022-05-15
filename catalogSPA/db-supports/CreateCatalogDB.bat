@@ -1,0 +1,2 @@
+mysql < CreateCatalogDB.sql
+pause

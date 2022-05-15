@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="UTF-8">
+	<style>
+	table, th , td  {border: 1px solid grey; border-collapse: collapse; padding: 5pt;}
+	table tr:nth-child(odd)	{background-color: #f1f1f1;}
+	table tr:nth-child(even) {background-color: #ffffff;}
+
+	.selected {color: red;}
+	.message {color: blue; font-size:12pt}
+	</style>
+
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src= "main.js"></script>
+
+<body ng-app="myApp" ng-controller="myController">
+<hr>
+<h1> Catalog SPA - Main Page</h1>
+
+
+<div ng-init="load(); showListPage()"></div>
+
+<div ng-include="'list.html'" ng-show="showList"></div>
+<div ng-include="'add.html'" ng-show="showAdd"></div>
+<div ng-include="'edit.html'" ng-show="showEdit"></div>
+
+</body>
+</html>

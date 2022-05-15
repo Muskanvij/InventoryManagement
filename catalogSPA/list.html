@@ -1,0 +1,23 @@
+
+<hr>
+<h1>List</h1>
+
+<button ng-click="add()">Add Product</button>
+<button ng-click="edit()">Edit Selected Product</button>
+<button ng-click="delete(selectedProduct)">Delete Selected Product</button><p></p>
+
+
+<table>
+
+  <tr
+  	ng-repeat="p in products | orderBy: 'id'"
+  	ng-click="setSelectedProduct(p)"
+  	ng-class="{selected: selectedProduct == p}"
+  >
+    <td>{{ p.id }}</td>
+    <td> <div style="width: 100px"> {{ p.name }} </div></td>
+    <td>{{ p.price }}</td>
+    <td>{{ p.onSale }}</td>
+  </tr>
+</table>
+
